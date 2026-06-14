@@ -1,0 +1,257 @@
+/* 文件路径：src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* 导航栏 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 24px;
+  color: #61dafb;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* 主内容区 */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  border-top: 1px solid #eee;
+}
+
+/* 文件路径：src/App.css 追加以下样式 */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-category {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.card-summary {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  padding: 60px 0;
+  font-size: 16px;
+}
+
+/* 文件路径：src/App.css 追加分类筛选按钮样式 */
+.category-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.category-bar button {
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.category-bar button.active {
+  background: #1976d2;
+  color: #fff;
+  border-color: #1976d2;
+}
+
+.category-bar button:hover {
+  border-color: #1976d2;
+}
+
+.result-info {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* 文件路径：src/App.css 追加详情页样式 */
+.post-view {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.post-view h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.post-view time {
+  display: block;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.content {
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
+
+.content h2 {
+  margin: 24px 0 12px;
+  font-size: 22px;
+}
+
+.content p {
+  margin-bottom: 12px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* 搜索框样式（追加到 App.css） */
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #1976d2;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+}
+
+.status-msg {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 16px;
+  color: #999;
+}
+
+.status-msg.error {
+  color: #e74c3c;
+}
+
+.status-msg.error button {
+  margin-left: 10px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
