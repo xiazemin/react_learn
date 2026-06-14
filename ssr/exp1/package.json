@@ -1,0 +1,18 @@
+{
+  "name": "ssr-exp1",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:client": "node build.js",
+    "start": "node server.js",
+    "dev": "npm run build:client && npm run start"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

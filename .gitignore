@@ -4,6 +4,7 @@
 # Build output
 **/dist/
 **/build/
+**/.next/
 
 # Environment files
 .env
